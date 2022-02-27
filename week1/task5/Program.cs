@@ -4,7 +4,7 @@ int[] input = new[] { 1, 2, 5, 7, 2, 3, 5, 7 };
 
 // In this variable we will store the lenght off the input array divided by 2
 int halfLenght = 0;
-if (input.Length % 2 == 0 | input != null)
+if (input != null & input.Length % 2 == 0)
 {
     halfLenght = input.Length / 2;
 
@@ -18,6 +18,7 @@ else
     Console.WriteLine("Array must be even!");
 }
 
+// Step 1: Split
 int[][] Split(int[] input)
 {
     // create and array with tge first half of orinal arrray
@@ -33,6 +34,7 @@ int[][] Split(int[] input)
     return arr;
 }
 
+// Step 2: Add arrays
 int[] AddArray(int[][] input)
 {
     int[] result = new int[halfLenght];
@@ -44,6 +46,7 @@ int[] AddArray(int[][] input)
     return result;
 }
 
+// Step 3: Console log result array
 void WriteResult(int[] result)
 {
     Array.ForEach(result, Console.WriteLine);

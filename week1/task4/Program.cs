@@ -1,15 +1,15 @@
 ﻿//4. Classical task
-int n = 6;
+int number = 6;
 // I have used an unsigned long integer so we can store long integer values.
-ulong nthNumber = Fibonacci(n); //TODO: Implement Fibonacci
+ulong nthNumber = Fibonacci(number); //TODO: Implement Fibonacci
 
-ulong Fibonacci(int n)
+ulong Fibonacci(int number)
 {
-    if (n == 0) return 0;
+    if (number == 0) return 0;
 
     ulong current = 1;
     ulong prev = 0;
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i < number; i++)
     {
         // the variable temp will hold temporarly the  value of current
         // to later use it to update prev variable

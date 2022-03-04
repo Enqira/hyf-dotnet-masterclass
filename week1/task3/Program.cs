@@ -11,13 +11,13 @@ int[] GetResult(int[] arr)
         switch (num)
         {
             case < 0:
-                negativeSum = negativeSum + num;
+                negativeSum += num;
+                break;
+            case > 0 when positiveProduct == 0:
+                positiveProduct = num;
                 break;
             case > 0:
-                if (positiveProduct == 0)
-                    positiveProduct = num;
-                else
-                    positiveProduct = positiveProduct * num;
+                positiveProduct *= num;
                 break;
         }
     }

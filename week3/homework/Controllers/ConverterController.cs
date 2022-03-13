@@ -33,26 +33,37 @@ public class ConverterController : ControllerBase
         string responseValueType = "";
         double responseValue = 0;
 
+        //From Miles to Kilometers
         if (valueType == "Miles")
         {
             responseValueType = "Kilometers";
             responseValue = requestValue * 1.609;
         }
-        else if (valueType == "Kilometers")
-        {
-            responseValueType = "Miles";
-            responseValue = requestValue / 1.609;
-        }
+        // From Gallons to Liters
         else if (valueType == "Gallons")
         {
             responseValueType = "Liters";
             responseValue = requestValue * 3.785;
         }
-        else if (valueType == "Liters")
+        // From Pounds to Kilograms 
+        else if (valueType == "Pounds")
         {
-            responseValueType = "Gallons";
-            responseValue = requestValue / 3.785;
+            responseValueType = "Kilograms";
+            responseValue = requestValue / 2.205;
         }
+        // From Yards to Meters
+        else if (valueType == "Yards")
+        {
+            responseValueType = "Meters";
+            responseValue = requestValue / 1.094;
+        }
+        // From Feets to Centimeters
+        else if (valueType == "Feets")
+        {
+            responseValueType = "Centimeters";
+            responseValue = requestValue / 30.48;
+        }
+
 
         // Create an array of objects
         Object[] obj = new Object[2];

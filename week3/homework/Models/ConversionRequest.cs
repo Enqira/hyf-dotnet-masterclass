@@ -5,9 +5,11 @@ public class ConversionRequest
     public enum RequestValueType
     {
         Miles,
-        Kilometers,
         Gallons,
-        Liters
+        Pounds,
+        Yards,
+        Feets
+
     }
     public double Value { get; set; }
     public RequestValueType TypeToConvert { get; set; }

@@ -25,14 +25,13 @@ public class ReservationController : ControllerBase
         _repo.Add(r);
     }
 
-    [HttpGet("GetReservation")]
-    public List<Reservation> GetReservation(int id)
+    [HttpGet("GetReservation")] //Get a reservation with id
+    public Reservation GetReservation(int id)
     {
-        return _repo.GetReservation(id).ToList();
+        return _repo.GetReservation(id);
     }
-    // List reservations for a meal
 
-    [HttpGet("GetMealReservations")]
+    [HttpGet("GetMealReservations")] // List reservations for a meal
     public List<Reservation> MealReservations(int id)
     {
         return _repo.MealReservations(id).ToList();

@@ -37,9 +37,9 @@ public class InMemoryMealRepository : IMealRepository
     {
         Meals.Add(m);
     }
-    public IEnumerable<Meal> GetMeal(int id)
+    public Meal GetMeal(int id)
     {
-        return Meals.Where(m => m.ID == id);
+        return Meals.FirstOrDefault(m => m.ID == id);
     }
 }
 

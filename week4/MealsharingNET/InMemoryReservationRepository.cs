@@ -35,14 +35,14 @@ public class InMemoryReservationRepository : IReservationRepository
     {
         Reservations.Add(r);
     }
-    public IEnumerable<Reservation> GetReservation(int id)
+    public Reservation GetReservation(int id)
     {
-        return Reservations.Where(r => r.ID == id);
+        return Reservations.FirstOrDefault(r => r.ID == id);
     }
 
-    public IEnumerable<Reservation> MealReservations(int id)
+    public IEnumerable<Reservation> MealReservations(int mealId)
     {
-        return Reservations.Where(r => r.MealID == id);
+        return Reservations.Where(r => r.MealID == mealId);
     }
 }
 

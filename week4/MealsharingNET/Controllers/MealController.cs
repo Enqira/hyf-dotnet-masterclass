@@ -26,8 +26,8 @@ public class MealController : ControllerBase
     }
 
     [HttpGet("GetMeal")]
-    public List<Meal> GetMeal(int id)
+    public Meal GetMeal(int id)
     {
-        return _repo.GetMeal(id).ToList();
+        return _repo.GetMeal(id);
     }
 }

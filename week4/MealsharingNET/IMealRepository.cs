@@ -7,5 +7,5 @@ public interface IMealRepository
     IEnumerable<Meal> ListMeals();
     void Add(Meal m);
 
-    IEnumerable<Meal> GetMeal(int id);
+    Meal GetMeal(int id);
 }

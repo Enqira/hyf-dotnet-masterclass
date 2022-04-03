@@ -23,9 +23,9 @@ public class MealController : ControllerBase
         return new OkObjectResult(response);
     }
     [HttpPost("Add")]
-    public void AddMeal([FromBody] Meal m)
+    public async Task<AddMeal>([FromBody] Meal m)
     {
-        _repo.Add(m);
+        await _repo.Add(m);
     }
 
     [HttpGet("GetMeal")]

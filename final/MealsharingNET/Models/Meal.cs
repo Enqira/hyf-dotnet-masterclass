@@ -10,7 +10,7 @@ public class Meal
     public int MaxReservations { get; set; }
     public decimal Price { get; set; }
 
-    public DateTime CreatedDate { get; set; }
+    public DateTime CreatedDate { get; set; } = DateTime.Now;
 
     public string ImageUrl { get; set; }
 

@@ -1,0 +1,14 @@
+footer {
+  background: #c13f68;
+  color: --black;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  align-items: center;
+  bottom: 0;
+  height: 400px;
+}
+.footer-menu,
+.copyright {
+  margin: 20px;
+}

@@ -13,13 +13,15 @@ public class MealRepository : IMealRepository
     {
         await using var connection = new MySqlConnection(Shared.ConnectionString);
         var Meals = await connection.QueryAsync<Meal>("SELECT * FROM Meals");
+        //var Meals = await connection.QueryFirstAsync<Meal>("SELECT * FROM Meals");
         return Meals;
     }
 
-    public async Task AddMeal(Meal meal)
+    public async Task Add(Meal meal)
     {
         await using var connection = new MySqlConnection(Shared.ConnectionString);
         await connection.ExecuteAsync("INSERT INTO Meals VALUES (@ID, @Title, @Description, @Location, @When, @Price, @MaxReservations)", meal);
+
     }
     public async Task<Meal> GetMeal(int id)
     {

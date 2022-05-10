@@ -5,8 +5,8 @@ public class Reservation
     public int ID { get; set; }
     public int NumberOfGuests { get; set; }
     public int MealID { get; set; }
-    public DateTime CreatedDate { get; set; } = DateTime.Now;
-    public long ContactPhoneNumber { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public string ContactPhoneNumber { get; set; }
     public string ContactName { get; set; }
     public string ContactEmail { get; set; }
 }
